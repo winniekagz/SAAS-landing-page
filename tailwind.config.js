@@ -13,6 +13,7 @@ export default {
         "light-blue":'#5c9fea',
         'bg-main':'#f7f6fa',
         'purple':'#1e1d4c',
+        'bg-light':'#cac9da'
        
       }
     },
