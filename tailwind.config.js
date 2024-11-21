@@ -15,7 +15,13 @@ export default {
         'purple':'#1e1d4c',
         'bg-light':'#cac9da'
        
-      }
+      },
+     
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            },
+          
+      
     },
   },
   plugins: [

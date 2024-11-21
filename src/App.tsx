@@ -1,20 +1,27 @@
 
-import Header from './Header'
-import AboutUs from './pages/AboutUs'
-import Features from './pages/Features'
-import Hero from './pages/Hero'
+
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import LandingPage1 from './pages/LandingPage1'
+import LandingPage2 from './pages/LandingPage2'
 
 function App() {
- 
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+       <LandingPage1/>
+      ),
+    },
+    {
+      path: "/landing-page-2",
+      element: <LandingPage2/>,
+    },
+  ]);
   return (
     <>
-  <div className="bg-white p-4 ">
-  <Header/>
-  <div className="flex-1 min-h-screen">
-  <Hero/>
-  <AboutUs/>
-  <Features/>
-  </div>
+  <div className="bg-white p-0 ">
+ <RouterProvider router={router}/>
   </div>
     </>
   )

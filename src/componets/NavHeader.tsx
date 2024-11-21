@@ -1,20 +1,21 @@
-
+import { NavLink } from "react-router-dom";
 
 type Props = {
-    text:string
-}
+  text: string;
+  route: string;
+};
 
-export default function NavHeader({text}: Props) {
+export default function NavHeader({ text, route }: Props) {
   return (
-        <div>
-            <p className='font-[400] text-dark-purple text-[18px] hover:text-light-purple transition ease-in-out  delay-150 hover:translate-y-1 hover:scale-110 delay-600'> 
-            {text}
-            </p>
-        </div>
-   
-  )
+    <NavLink
+      to={route}
+      className={({ isActive }) =>
+        `font-[600] text-[18px] transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110 delay-600 ${
+          isActive ? "text-light-purple" : "text-purple"
+        }`
+      }
+    >
+      {text}
+    </NavLink>
+  );
 }
-
-
-
-
